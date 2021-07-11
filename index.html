@@ -17,7 +17,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Flash Cards</title>
   </head>
   <body>
@@ -29,9 +28,9 @@
         <div class="col">
           <form action="">
             <label for="front">Front</label>
-            <textarea id="front" class="form-control" rows="3"></textarea>
-            <label for="back"></label>
-            <textarea id="back" class="form-control" rows="3"></textarea>
+            <textarea id="frontCard" class="form-control" rows="3"></textarea>
+            <label for="back">Back</label>
+            <textarea id="backCard" class="form-control" rows="3"></textarea>
             <button
               type="button"
               class="btn btn-primary btn-lg btn-block mt-3"
@@ -39,16 +38,26 @@
             >
               Save Card
             </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg btn-block mt-3"
+              id="btnReview"
+            >
+              <a href="/reviewCards.html" >Review </a>
+            </button>
           </form>
         </div>
         <div class="col">
-            <h2>Make a flash card!</h2>
-            <p>Lets make add some flash cards</p>
+          <h2>Make a flash card!</h2>
+          <p>Lets make add some flash cards</p>
+          <p>Number of flashcards: <output id="numCardsOut"></output></p>
         </div>
       </div>
     </section>
 
-    <script src="app.js"></script>
+    <script src="/app.js"></script>
+    <script src="/reviewCards.js"></script>
+    <script src="/localforage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
