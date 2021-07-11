@@ -17,35 +17,28 @@
     <title>Flash Cards</title>
   </head>
   <body>
-    <section class="container">
-      <div class="row">
-        <h1>Flash Cards</h1>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div
-            id="card"
-            class="p-3 d-flex justify-content-center align-items-center"
-          >
-            <h3 id="frontCard"></h3>
-            <h3 id="backCard"></h3>
-          </div>
-          <p>Card # <output id="cardNum"></output></p>
-          <button
-            type="button"
-            class="btn btn-primary btn-lg btn-block mt-3"
-            id="btnFlip"
-          >
-            Flip Card
-          </button>
+    <div class="container">
+        <div class="row">
+            <h1>Flashcards</h1>
         </div>
-        <div class="col">
-          <h2>Review Cards</h2>
-          <p>When intrusctions bla bla bla</p>
-          <p>Number of flashcards: <output id="numCards"></output></p>
+        <div class="row">
+            <div class="col">
+                <div id="card" class="p-3 d-flex justify-content-center align-items-center">
+                    <h3 id="frontCard"></h3>
+                    <h3 id="backCard"></h3>
+                </div>
+                <p>Card #<output id="cardNum"></output></p>
+                <button type="button" class="btn btn-primary btn-lg btn-block mt-3" id="btnFlip">Flip Card</button>
+            </div>
+            <div class="col">
+                <h2>Review Your Cards</h2>
+                <p>When you want to see the answer or definition, tap on the card and it will appear.</p>
+                <p>Number of Flashcards: <output id="numCards"></output></p>
+                <a href="index.html"><button type="button" class="btn btn-primary btn-lg btn-block mt-3" id="btnFlip">Add Cards</button></a>
+            </div>
         </div>
-      </div>
-    </section>
+
+    <script src="localForage.min.js"></script>
     <script src="/reviewCards.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

@@ -3,6 +3,7 @@ let currentCard = 0;
 let frontCard = true;
 
 init();
+
 function init() {
   getCards();
   document.getElementById("card").addEventListener("click", displayNextCard);
@@ -15,7 +16,7 @@ function getCards() {
     .then(function (value) {
       if (value != null) {
         cards = JSON.parse(value);
-        document.getElementById("numCardsOut").innerHTML = cards.length;
+        document.getElementById("numCards").innerHTML = cards.length;
         displayNextCard();
       }
     })
@@ -32,13 +33,14 @@ function displayNextCard() {
   document.getElementById("frontCard").innerHTML = front;
   document.getElementById("backCard").innerHTML = back;
   document.getElementById("backCard").style.display = "none";
-  document.getElementById("cardNumOut").innerHTML = currentCard + 1;
+  document.getElementById("cardNum").innerHTML = currentCard + 1;
   if (currentCard < cards.length - 1) {
     currentCard++;
   } else {
     currentCard = 0;
   }
 }
+
 function flipCard() {
   if (frontCard) {
     document.getElementById("backCard").style.display = "block";
